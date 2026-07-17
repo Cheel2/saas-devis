@@ -100,3 +100,26 @@ text
 - [Risque ou décision complexe identifié]
 
 EN ATTENTE DE VALIDATION POUR DÉMARRER.
+---
+
+## 📤 PROTOCOLE D'EXPORT POUR KIMI REVIEW (OBLIGATOIRE)
+
+À la fin de chaque tâche de codage (création de feature, fix, refonte, architecture), tu dois OBLIGATOIREMENT générer ou mettre à jour un fichier de review dans le dossier `.kimi_reviews/`.
+
+### 📋 Règles Strictes de Génération :
+1. **Nom du fichier :** Crée un fichier nommé `.kimi_reviews/review-[nom_de_la_tache].md`.
+2. **Contenu Intégral (CRITIQUE) :** Tu dois recopier 100% du code que tu viens de générer ou modifier.
+   -  **INTERDICTION FORMELLE** de résumer le code.
+   - 🚫 **INTERDICTION ABSOLUE** d'utiliser des placeholders ou raccourcis (ex: `// ... reste du code`, `// ... code inchangé`, `/* ... */`, `[insérer le reste ici]`).
+   - **RÈGLE D'OR :** Si un fichier fait 1000 lignes, tu dois écrire les 1000 lignes complètes dans le fichier de review. Kimi a besoin du contexte total.
+3. **Structure exacte du fichier Markdown :**
+
+```markdown
+# 📝 Review: [Nom de la tâche]
+
+## 🎯 Contexte & Prompt initial
+[Résume ma demande initiale en 2-3 phrases]
+
+## 💻 Code Généré (INTÉGRALITÉ)
+
+### 📄 [chemin/complet/du/fichier1.ext]
