@@ -100,26 +100,40 @@ text
 - [Risque ou décision complexe identifié]
 
 EN ATTENTE DE VALIDATION POUR DÉMARRER.
+
 ---
 
-## 📤 PROTOCOLE D'EXPORT POUR KIMI REVIEW (OBLIGATOIRE)
+##  PROTOCOLE D'ARCHIVAGE DES OUTPUTS POUR KIMI REVIEW (OBLIGATOIRE)
 
-À la fin de chaque tâche de codage (création de feature, fix, refonte, architecture), tu dois OBLIGATOIREMENT générer ou mettre à jour un fichier de review dans le dossier `.kimi_reviews/`.
+À la fin de CHAQUE réponse/output que tu fournis, tu dois OBLIGATOIREMENT créer un NOUVEAU fichier Markdown unique dans le dossier `.kimi_reviews/` qui archive l'intégralité de cet output précis.
 
 ### 📋 Règles Strictes de Génération :
-1. **Nom du fichier :** Crée un fichier nommé `.kimi_reviews/review-[nom_de_la_tache].md`.
-2. **Contenu Intégral (CRITIQUE) :** Tu dois recopier 100% du code que tu viens de générer ou modifier.
-   -  **INTERDICTION FORMELLE** de résumer le code.
-   - 🚫 **INTERDICTION ABSOLUE** d'utiliser des placeholders ou raccourcis (ex: `// ... reste du code`, `// ... code inchangé`, `/* ... */`, `[insérer le reste ici]`).
-   - **RÈGLE D'OR :** Si un fichier fait 1000 lignes, tu dois écrire les 1000 lignes complètes dans le fichier de review. Kimi a besoin du contexte total.
-3. **Structure exacte du fichier Markdown :**
+
+1. **UN FICHIER PAR OUTPUT (JAMAIS DE MISE À JOUR) :** 
+   - Tu ne dois JAMAIS modifier, écraser ou mettre à jour un ancien fichier de review. 
+   - Chaque output génère son propre fichier unique.
+
+2. **NOMINATION SÉQUENTIELLE :**
+   - Avant de créer le fichier, vérifie le contenu du dossier `.kimi_reviews/`.
+   - Nomme le fichier en incrémentant le numéro : `review_001.md`, `review_002.md`, `review_003.md`, etc.
+   - Si le dossier est vide, commence par `review_001.md`.
+
+3. **INTÉGRALITÉ ABSOLUE DU CODE (RÈGLE D'OR) :**
+   - Tu dois recopier 100% du code, de l'architecture et des textes que tu viens de générer dans cet output.
+   -  **INTERDICTION FORMELLE** de résumer.
+   - 🚫 **INTERDICTION ABSOLUE** d'utiliser des placeholders ou raccourcis (ex: `// ... reste du code`, `// ... code inchangé`, `/* ... */`, `[insérer le reste ici]`, ou "même structure que précédemment").
+   - **RÈGLE D'OR :** Si ton output contient 2 000 lignes de code ou 10 fichiers d'architecture, tu dois écrire les 2 000 lignes et les 10 fichiers en entier dans le fichier de review. Kimi a besoin du contexte total et exact de cet output précis.
+
+4. **Structure exacte du fichier Markdown à créer :**
 
 ```markdown
-# 📝 Review: [Nom de la tâche]
+# 📝 Review Output #[Numéro] - [Nom court de la tâche]
 
 ## 🎯 Contexte & Prompt initial
-[Résume ma demande initiale en 2-3 phrases]
+[Résume la demande/prompt exacte qui a déclenché cet output]
 
-## 💻 Code Généré (INTÉGRALITÉ)
+## 💻 Output Complet (INTÉGRALITÉ)
 
 ### 📄 [chemin/complet/du/fichier1.ext]
+---
+
